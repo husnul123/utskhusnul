@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <title>Navbar</title>
+    <style type="text/css">
+        .continer{
+            max-width: 860px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            background-color: grey;
+        }
+        .logo{
+            width: 40px;
+            margin: 4px 14px;
+            height: 40px;
+            background-size: 40px 40px;
+            border: solid 2px #666;
+            border-radius: 50px;
+            background-color: #fff;
+        }
+        .navbar-left{
+            float:left;
+        }
+        .navbar-right{
+            float:right;
+            width:760px;
+            padding-right:10px;
+        }
+        .navbar{
+            width:auto;
+            height:50px;
+            background:#444;
+            border-radius:2px;
+        } 
+        .navbar ul{
+            float:right;
+            margin:0;
+            padding:0;
+        }
+        .navbar li{
+            float:right;
+            list-style:none;
+            margin:0;
+            padding:0;
+        }
+        .navbar li a, .navbar li a:link {
+            float: right;
+            padding: 17px 12px;
+            color: #fff;
+            text-decoration: none;
+            position: relative;
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+        .navbar li a:hover{
+            background: #ddd;
+            color: #444;
+        }
+        .navbar li li a, .navbar li li a:link {
+            text-decoration: none;
+            font-size: 16px;
+            background: #444;
+            color: #fff;
+            width: 108px;
+            padding: 0px 0px 0 12px;
+            font-size: 12px;
+            line-height: 35px;
+        }
+        .navbar li li a:hover{
+            background: #ddd;
+            color: #444
+        }
+        .navbar li ul{
+            z-index:9999;
+            position:absolute;
+            left:-999em;
+            height:auto;
+            width:120px;
+            margin-top:50px;
+            border:1px solid #666;
+        }
+        .menu_toggle{
+            display: block;
+            width: 800px;
+            height: 0px;
+            margin: 0px;
+            background: #33FFFC; 
+            float: right;
+            cursor: pointer;
+            font-size: 40px;
+        }
+        .photo_profile{
+            width: 0px;
+            height: 0px;
+            text-align: center;
+            display: hide;
+            padding: 0px;
+            border: none;
+        }
+        .layanan{
+            width: 840px;
+            height: 300px;
+            display: flex;
+            border: 0px solid red;
+            padding: 10px;
+            margin: 10px; 
+            background-color: none;
+        }
+        .intensive{
+            width: 260px;
+            height: 100px;
+            display: flex;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+        .more{
+            text-align: center;
+            width: 260px;
+            height: 100px;
+            display: flex;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+        .me{
+            width: 200px;
+            height: 150px;
+            display: flex;
+            border: 1px solid black;
+            padding: 90px;
+            margin: 40px;
+        }
+        .me_photo_stat{
+            width: 150px;
+            height: 120px;
+            padding: 20px;
+            margin:20px;
+        }
+        .us{
+            width: 250px;
+            height: 150px;
+            border: 0px solid green;
+            padding: 50px;
+            margin: 40px;
+        }
+        .moreinfo{
+            width: 70px;
+            height: 70px;
+            display: flex;
+            border: 1px solid red;
+            padding: 20px;
+            margin: 2px;
+        }
+        .info{
+            width: 1px;
+            height: 1px;
+            display: flex;
+        }
+        .footer{
+            font-family: 'Libre Franklin', sans-serif;
+            background-color: grey;
+            color: white;
+            text-decoration: relative;
+            width: 860px;
+            height: 130px;
+        }
+        .footer ul{
+            float:left;
+            margin:0;
+            color: #fff;
+            padding:18px;
+        }
+        .footer li{
+            float:left;
+            list-style:none;
+            color: #fff;
+            margin:0px;
+            padding:15px;
+        }
+        .label.email-adress{
+            width: 40px;
+            height: 30px;
+            display: flex;
+            border: 0px solid red;
+            padding: 10px;
+            margin: 10px; 
+            background-color: lightblue;
+        }
+        .red{
+            float: left;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            border: 0px solid red;
+            padding: 90px;
+            margin: 40px;
+            background-color: lightblue;
+        }
+        hr{
+            width: 860px;
+        }
+        .row{
+            width: 100px;
+        }
+        .low{
+            float: left;
+        }
+        .iyo{
+            width: 260px;
+            height: 150px;
+            display: flex;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+        .yoi{
+            width: 260px;
+            height: 150px;
+            display: flex;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+        .iyy{
+            width: 260px;
+            height: 150px;
+            display: flex;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+        .yoo{
+            width: 260px;
+            height: 150px;
+            display: flex;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+        .ioy{
+            width: 260px;
+            height: 150px;
+            display: flex;
+            border: 0px solid red;
+            padding: 10px;
+            margin: 10px;
+        }
+        .iyi{
+            width: 260px;
+            height: 150px;
+            display: flex;
+            border: 0px solid red;
+            padding: 10px;
+            margin: 10px;
+        }
+        .footer-right{
+            float:right;
+            margin:0;
+            color: #fff;
+            padding:0;
+            height: 10px;
+        }
+        .footer ul{
+            float:right;
+            list-style:none;
+            color: #fff;
+            margin:0;
+            padding:0;
+        }
+        .do p input .email{
+            float: left;
+            margin:0;
+            color: #fff;
+            padding:128px;
+        }
+        }
+        .do p input .submit{
+            float: left;
+            margin:0;
+            color: #fff;
+            padding:128px;
+        }
+    </style>
+</head>
+<body id="page-top">
+    <div class="continer">
+        <div class="wrapper site-header_wrapper">
+            <nav class="navbar">
+                <div class="navbar-left"><div class="logo"></div></div>
+                <div class="navbar-right">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href='#'>Devartements</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href='#'>Blog</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="continer">
+        <div class="layanan">
+            <img class="photo_profile" src="35475225_2188847921349398_7082003670665003008_o.jpg" width="100px" height="100px" style="background-image: ">
+        </div>
+    </div>
+   
+
+    <hr>
+    <div class="continer">
+        <div class="intensive">
+            <i class="fa fa-heartbeat fa-1x" aria-hidden="true">  INTENSIVE CARE</i>
+        </div>
+        <div class="intensive">
+            <i class="fa fa-plus-square fa-1x margin-10px" aria-hidden="true">  FAMILY PLANNING</i>
+        </div>
+        <div class="intensive">
+            <i class="fa fa-stethoscope fa-1x" aria-hidden="true">  EXPERT CONSULTATION</i>
+        </div>
+    </div>
+
+
+    <div class="continer">
+        <div class="more">
+            <i class="fa fa-user-md fa-1x" aria-hidden="true">  DENTAL SCIENCE</i>
+        </div>
+        <div class="more">
+            <i class="fa fa-hospital-o fa-1x" aria-hidden="true">  X-RAY SERVICE</i>
+        </div>
+        <div class="more">
+            <i class="fa fa-ambulance fa-1" aria-hidden="true">  24X7 EMERGECY</i>
+        </div>
+    </div>
+    <hr>
+    <div class="continer">
+        <div class="me"></div>
+        <div class="us">
+            <form action="contact.php" method="POST">
+                <table>
+                <legend>Book on Appointmen</legend>
+                <p>
+                    <label>Name:</label>
+                    <input type="text" name="name" placeholder="">
+                </p>
+                <p>
+                    <label>Email:</label>
+                    <input type="email" name="email" placeholder="">
+                </p>
+                <p>
+                    <label>Appointmen Date:</label>
+                    <input type="date" name="tanggal" >
+                </p>
+                    <legend>Booked With Us Before</legend>
+                    <label>
+                        <input type="radio" name="choos" value="Yes"/>Yes
+                    </label>
+                    <label>
+                        <input type="radio" name="choos" value="No"/>No
+                    </label>
+                <p>
+                    <input type="submit" name="submit" value="CONFIRM BOOKING">
+                </p>
+                </table>
+            </form>
+        </div>
+        </div>
+    </div>
+    <hr>
+    <div class="continer">
+        <div class="do">
+            <p>
+                <input type="email" float="left" width="400px" name="email" placeholder="enter email adress">
+                <input type="submit" name="submit" value="Subscribe!">
+            </p>
+        </div>
+    </div>
+    <div class="continer">
+        <div class="lia">
+
+        </div>
+        <div class="iyo">
+            
+        </div>
+        <div class="yoi">
+            
+        </div>
+        <div class="yoo">
+            
+        </div>
+        <div class="iyy">
+            
+        </div>
+        <div class="ioy">
+            
+        </div>
+        <div class="iyi">
+            
+        </div>
+    </div>
+    <hr>
+    <div class="continer">
+    <div class="footer">
+        <footer>
+            <ul>
+                <li><a href="text-white">Copyright @ 2014 All Rights Reserverd by izzi Inc</a></li>
+                <li><a href="text-white">Home/About Us/Team/Clients/FAQs/Contact</a></li>
+                <li><a href="text-white">Terms of Usa/Privacy Policy</a></li>
+            </ul>
+        </footer>
+    </div>  
+    </div>
+</body>
+</html>
